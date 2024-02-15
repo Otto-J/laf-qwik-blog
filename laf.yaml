@@ -1,0 +1,4 @@
+version: 1.0.0
+name: 个人自用
+spec:
+  runtime: node
