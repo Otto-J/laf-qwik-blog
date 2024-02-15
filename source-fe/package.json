@@ -11,11 +11,20 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.4",
+    "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vue": "^4.0.8",
     "@builder.io/qwik": "^1.4.5",
     "@qwikdev/astro": "^0.5.2",
+    "@varlet/ui": "^2.22.3",
+    "@vueuse/core": "^10.7.2",
     "astro": "^4.3.7",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
     "vue": "^3.4.19"
+  },
+  "devDependencies": {
+    "daisyui": "^4.7.2",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0"
   }
 }
