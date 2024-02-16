@@ -119,6 +119,7 @@
 <script lang="ts" setup>
 import { useDark, useToggle } from "@vueuse/core";
 import { StyleProvider, Themes } from "@varlet/ui";
+import { watchEffect } from "vue";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);

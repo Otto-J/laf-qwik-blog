@@ -4,6 +4,7 @@ import qwikDev from "@qwikdev/astro";
 import tailwind from "@astrojs/tailwind";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
+import { VarletUIResolver } from "unplugin-vue-components/resolvers";
 
 // https://astro.build/config
 export default defineConfig({
@@ -64,19 +65,21 @@ export default defineConfig({
           //   type: true,
           // },
         ],
+        resolvers: [VarletUIResolver({ autoImport: true })],
       }),
-      // Components({
-      //   /* options */
-      //   dts: true,
-      //   resolvers: [
-      //     // example of importing Vant
-      //     (componentName) => {
-      //       // where `componentName` is always CapitalCase
-      //       // if (componentName.startsWith("Van"))
-      //       //   return { name: componentName.slice(3), from: "vant" };
-      //     },
-      //   ],
-      // }),
+      Components({
+        //   /* options */
+        dts: true,
+        resolvers: [
+          VarletUIResolver(),
+          //     // example of importing Vant
+          //     (componentName) => {
+          //       // where `componentName` is always CapitalCase
+          //       // if (componentName.startsWith("Van"))
+          //       //   return { name: componentName.slice(3), from: "vant" };
+          //     },
+        ],
+      }),
     ],
   }, // 自定义 vite 配置
   // build: {},
